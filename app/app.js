@@ -3,7 +3,7 @@ var app = angular.module("PicitApp", ["ngRoute", "angular.filter", "firebase"]);
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'partials/.html',
+        templateUrl: 'partials/login.html',
         controller: ''
       }).when('/add', {
         templateUrl: 'partials/.html',
