@@ -1,0 +1,23 @@
+{
+  "name": "angular",
+  "version": "0.0.0",
+  "authors": [
+    "Ryan Tanay <ryantanay@newevolution.org>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-filter": "~0.5.5",
+    "angular-route": "~1.4.4",
+    "angularfire": "~1.1.2",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}
