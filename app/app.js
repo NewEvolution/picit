@@ -8,6 +8,9 @@ app.config(['$routeProvider',
       }).when('/main', {
         templateUrl: 'partials/initial-view.html',
         controller: 'AuthCtrl'
+      }).when('/add', {
+        templateUrl: 'partials/add-pic.html',
+        controller: 'AddCtrl'
       }).otherwise({
         redirectTo: '/'
       });
