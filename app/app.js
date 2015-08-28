@@ -4,13 +4,10 @@ app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: 'partials/login.html',
-        controller: ''
-      }).when('/add', {
-        templateUrl: 'partials/.html',
-        controller: 'AddCtrl'
-      }).when('/:somevar', {
-        templateUrl: 'partials/.html',
-        controller: 'DetailCtrl'
+        controller: 'AuthCtrl'
+      }).when('/main', {
+        templateUrl: 'partials/initial-view.html',
+        controller: 'AuthCtrl'
       }).otherwise({
         redirectTo: '/'
       });
