@@ -10,6 +10,11 @@
         <ul>
           <li ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid}"><a href="" ng-click="setBoard(board.title)">{{board.title}}</a></li>
         </ul>
+        <div>
+          <p>Board Title<input label="Board Title" type="text" ng-model="newBoard.title"></p>
+          <p>Board Desription<input label="Board Description" type="text" ng-model="newBoard.description"></p>
+          <button type="button" ng-click="addBoard()" class="btn btn-primary" data-dismiss="modal">New Board</button>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
