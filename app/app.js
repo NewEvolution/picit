@@ -14,6 +14,9 @@ app.config(['$routeProvider',
       }).when('/user', {
         templateUrl: 'partials/user-view.html',
         controller: 'UserCtrl'
+      }).when('/board', {
+        templateUrl: 'partials/board.html',
+        controller: 'boardCtrl'
       }).otherwise({
         redirectTo: '/'
       });
