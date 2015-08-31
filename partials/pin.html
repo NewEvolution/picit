@@ -9,7 +9,7 @@
       <p>{{pin.description}}</p>
     </div>
     <div class="col-sm-3">
-      <div class="pin" ng-repeat="item in boards | filter:{'type': 'board', 'title': boardId}">
+      <div class="pin" ng-repeat="item in boards | filter:{'type': 'board', 'title': boardId[0]}">
         <h3>{{item.title}}</h3>
         <a href="#"><img src="{{item.url}}" >
           <p>Image will go in here</p>

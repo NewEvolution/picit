@@ -3,11 +3,14 @@ function($scope, $routeParams, $firebaseArray, $firebaseObject, $anchorScroll) {
 
   var ref = new Firebase("https://picit-nss.firebaseio.com/pics");
   var pin = new Firebase("https://picit-nss.firebaseio.com/pics/" + $routeParams.clickedPin);
+  $scope.boardId = [];
 
   $scope.boards = $firebaseArray(ref);
   $scope.pin = $firebaseObject(pin);
   $scope.pin.$loaded(function(data) {
-    $scope.boardId = data.boardId;
+    for (var i = 0; i < data.boardId.length; i++) {
+      $scope.boardId.push(data.boardId[i]);
+    }
   });
   $anchorScroll("#top");
 }]);
