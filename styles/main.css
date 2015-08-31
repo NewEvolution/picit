@@ -5,7 +5,7 @@
 .pin {
   border: 2px solid black; }
 
-div.initial-view {
+.initial-view {
   margin-bottom: 27px; }
 
 div.pin > h3 {
@@ -16,7 +16,6 @@ div.pin > p {
 
 .tack {
   margin-top: 5px;
-  margin-left: 5px;
-  display: none; }
+  margin-left: 5px; }
 
 /*# sourceMappingURL=main.css.map */
