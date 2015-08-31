@@ -1,0 +1,21 @@
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9">
+      <a id="#top"></a>
+      <h1>{{pin.title}}</h1>
+      <div class="pin-detail-image">
+        <img src="{{pin.url}}">
+      </div>
+      <p>{{pin.description}}</p>
+    </div>
+    <div class="col-sm-3">
+      <div class="pin" ng-repeat="item in boards | filter:{'type': 'board', 'title': boardId}">
+        <h3>{{item.title}}</h3>
+        <a href="#"><img src="{{item.url}}" >
+          <p>Image will go in here</p>
+        </a>
+        <p>{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>

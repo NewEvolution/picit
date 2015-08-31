@@ -1,11 +1,11 @@
     <section class="container-fluid" > 
       <div class="row initial-view">
-        <div class="col-md-3" ng-repeat="board in boards | filter: {'type': 'pin', 'private': false}">
+        <div class="col-sm-4 col-md-3" ng-repeat="board in boards | filter: {'type': 'pin', 'private': false}">
           <div class="pin">
-            <button type="submit" class="btn btn-warning btn-xs btn-hover tack invisible" >TackIt!</button>
+            <button class="btn btn-warning btn-xs btn-hover tack invisible">PicIt!</button>
             <h3>{{board.title}}</h3>
             <div class="pin-image">
-              <a href="#"><img src="{{board.url}}" width="278" height="278"></a>
+              <a href="" ng-click="gotoPin(board)"><img src="{{board.url}}"></a>
             </div>
             <p>{{board.description}}</p>
           </div>
