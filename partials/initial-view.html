@@ -1,15 +1,35 @@
-    <section class="container-fluid" > 
-      <div class="row initial-view">
-        <div class="col-sm-4 col-md-3" ng-repeat="board in boards | filter: {'type': 'pin', 'private': false}">
-          <div class="pin">
-            <button class="btn btn-warning btn-xs btn-hover tack invisible" >PicIt!</button>
-            <button class="btn btn-warning btn-xs btn-hover tack invisible" ng-click="deleteIt(board.$id)">Delete It!</button>
-            <h3>{{board.title}}</h3>
-            <div class="pin-image">
-              <a href="" ng-click="gotoPin(board)"><img src="{{board.url}}"></a>
-            </div>
-            <p>{{board.description}}</p>
-          </div>
-        </div>        
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+        <li><a href="#/main">Home</a></li>
+        <li><a href="#/add">Add</a></li>
+      </ul>
+    </div>
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input ng-model="search" type="text" class="form-control" placeholder="Search">
       </div>
-    </section>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">My Boards</a></li>
+    </ul>
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<section class="container-fluid" > 
+  <div class="row initial-view">
+    <div class="col-sm-4 col-md-3" ng-repeat="board in boards | filter: {'type': 'pin', 'private': false}">
+      <div class="pin">
+        <button class="btn btn-warning btn-xs btn-hover tack invisible" >PicIt!</button>
+        <button class="btn btn-warning btn-xs btn-hover tack invisible" ng-click="deleteIt(board.$id)">Delete It!</button>
+        <h3>{{board.title}}</h3>
+        <div class="pin-image">
+          <a href="" ng-click="gotoPin(board)"><img src="{{board.url}}"></a>
+        </div>
+        <p>{{board.description}}</p>
+      </div>
+    </div>        
+  </div>
+</section>
