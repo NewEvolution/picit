@@ -1,3 +1,23 @@
+<!-- Board Chooser Modal -->
+<div class="modal fade" id="boardChooser" tabindex="-1" role="dialog" aria-labelledby="boardChooserLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="boardChooserLabel">Boards</h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Choose Board</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Board Chooser Modal -->
+
 <section>
   <h2>PinIt</h2>
   <div>
@@ -12,5 +32,5 @@
   <div>
     Private<input type="checkbox" ng-model="newItem.private" /> 
   </div>
-  <button ng-click="addPic()">Add Pic</button>
+  <button ng-click="addPic()" data-toggle="modal" data-target="#boardChooser">Add Pic</button>
 </section>

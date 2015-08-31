@@ -3,7 +3,8 @@
   text-align: center; }
 
 .pin {
-  border: 2px solid black; }
+  border: 2px solid black;
+  margin-top: 20px; }
 
 div.initial-view {
   margin-bottom: 27px; }

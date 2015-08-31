@@ -11,6 +11,9 @@ app.config(['$routeProvider',
       }).when('/add', {
         templateUrl: 'partials/add-pic.html',
         controller: 'AddCtrl'
+      }).when('/user', {
+        templateUrl: 'partials/user-view.html',
+        controller: 'UserCtrl'
       }).otherwise({
         redirectTo: '/'
       });

@@ -1,0 +1,14 @@
+    <section class="container-fluid"> 
+      <div class="row initial-view">
+        <div class="col-md-3" ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid}">
+          <div class="pin">
+            <button type="submit" class="btn btn-warning btn-xs btn-hover tack" >TackIt!</button>
+            <h3>{{board.title}}</h3>
+            <a href="#"><img src="{{board.url}}" >
+              <p>Image will go in here</p>
+            </a>
+            <p>{{board.description}}</p>
+          </div>
+        </div> 
+      </div>
+    </section>
