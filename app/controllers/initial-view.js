@@ -11,6 +11,11 @@ app.controller("InitCtrl",
   $(".initial-view").on('mouseleave', ".pin", function() {
     $(this).children(".tack").addClass("invisible");
   });
+
+  $scope.messages = $firebaseArray(ref);
+    $scope.deleteIt = function(pics) {
+        ref.child(pics).remove();
+    };
   
   // $scope.onMouseEnter = function showTack() {
   //   $(".tack").css("display", "inline-block");
