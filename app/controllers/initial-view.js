@@ -4,12 +4,12 @@ app.controller("InitCtrl",
     $scope.boards = $firebaseArray(ref);
     console.log($scope.boards);
 
-  $(".initial-view").on('mouseenter', ".pin", function() {
-    $(this).children(".tack").show();
+  $(".initial-view").on('mouseenter', "div.pin", function() {
+    $(this).children(".tack").removeClass("invisible");
   });  
 
   $(".initial-view").on('mouseleave', ".pin", function() {
-    $(".tack").hide();
+    $(this).children(".tack").addClass("invisible");
   });
   
   // $scope.onMouseEnter = function showTack() {
