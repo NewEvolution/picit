@@ -5,19 +5,25 @@
 
 .pin {
   border: 2px solid black;
+  margin-top: 20px;
+  .pin-image {
+    height: 300px;
+    overflow: hidden;
+  }
+  h3 {
+    text-align: center;
+  }
+  p {
+    margin-left: 5px;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 .initial-view {
   margin-bottom: 27px;
-}
-
-div.pin > h3 {
-  text-align: center;
-}
-
-div.pin > p {
-  margin-left: 5px;
-}
+} 
 
 .tack {
   margin-top: 5px;

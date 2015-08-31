@@ -8,8 +8,10 @@
     <title>Picit</title>
   </head>
   <body ng-app="PicitApp">
-    
-    <div ng-view>
+
+    <div ng-controller="AuthCtrl">
+      <div ng-hide="mainContentVisible" ng-view>
+      </div>
     </div>
 
     <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
@@ -23,6 +25,9 @@
     <script src="app/factories/uid-handler.js"></script>
     <script src="app/controllers/auth-control.js"></script>
     <script src="app/controllers/add-pic.js"></script>
+    <script src="app/controllers/add-board.js"></script>
     <script src="app/controllers/initial-view.js"></script>
+    <script src="app/controllers/user-view.js"></script>
+    <script src="app/controllers/pin-view.js"></script>
   </body>
 </html>

@@ -11,4 +11,17 @@ app.controller("InitCtrl",
   $(".initial-view").on('mouseleave', ".pin", function() {
     $(this).children(".tack").addClass("invisible");
   });
+
+  $scope.gotoPin = function(sentItem) {
+    window.location = "#/pin/" + sentItem.$id;
+  };
+
+    $scope.deleteIt = function(pics) {
+        ref.child(pics).remove();
+    };
+  
+  // $scope.onMouseEnter = function showTack() {
+  //   $(".tack").css("display", "inline-block");
+  //   console.log("function called");
+  // };
 });

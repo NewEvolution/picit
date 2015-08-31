@@ -3,16 +3,20 @@
   text-align: center; }
 
 .pin {
-  border: 2px solid black; }
+  border: 2px solid black;
+  margin-top: 20px; }
+  .pin .pin-image {
+    height: 300px;
+    overflow: hidden; }
+  .pin h3 {
+    text-align: center; }
+  .pin p {
+    margin-left: 5px; }
+  .pin img {
+    width: 100%; }
 
 .initial-view {
   margin-bottom: 27px; }
-
-div.pin > h3 {
-  text-align: center; }
-
-div.pin > p {
-  margin-left: 5px; }
 
 .tack {
   margin-top: 5px;

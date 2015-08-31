@@ -2,23 +2,55 @@ app.controller("AddCtrl",
   ["$scope",
   "$routeParams",
   "$firebaseArray",
-  function($scope, $routeParams, $firebaseArray) {
+  "uidHandle",
+  function($scope, $routeParams, $firebaseArray, uidHandler) {
 
-  var ref = new Firebase("https://picit-nss.firebaseio.com/pics");
+    var ref = new Firebase("https://picit-nss.firebaseio.com/pics");
+    $scope.pic = $firebaseArray(ref);
+    $scope.boards = $firebaseArray(ref);
     $scope.messages = $firebaseArray(ref);
     $scope.newItem = {};
+    $scope.newBoard = {};
+    $scope.uid = uidHandler.getUid();
+    $scope.setBoard = function(boardName) {
+      $scope.newItem.boardId = boardName;
+    };
     $scope.addPic = function() {
+      $scope.pic.$add({
+
+        type: "pin",
+        url: $scope.newItem.url || null,
+        title: $scope.newItem.title || null,
+        boardId: [$scope.newItem.boardId],
+        private: $scope.newItem.private || false,
+        userId: $scope.uid || null,
+        description: $scope.newItem.description || null
+      });
+      $scope.newItem = {};
+    };
+    $scope.addBoard = function() {
+       $scope.boards.$add({
+
+        type: "pin",
+        url: $scope.newItem.url || null,
+        title: $scope.newItem.title || null,
+        boardId: [$scope.newBoard.title] || null,
+        private: $scope.newItem.private || false,
+        userId: $scope.uid || null,
+        description: $scope.newItem.description || null
+      });
+      
       $scope.messages.$add({
 
-        type: $scope.newItem.type,
-        url: $scope.newItem.url,
-        title: $scope.newItem.title,
-        boardId: $scope.newItem.boardId,
-        private: $scope.newItem.private,
-        userId: $scope.newItem.userId,
-        description: $scope.newItem.description
-
+        type: "board",
+        title: $scope.newBoard.title,
+        pinIds: [],
+        //boardId: $scope.newItem.boardId,
+        private: $scope.newItem.private || false,
+        userId: uidHandler.getUid(),
+        description: $scope.newBoard.description
       });
     };
+
   }
 ]);

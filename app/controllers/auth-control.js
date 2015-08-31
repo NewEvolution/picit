@@ -3,14 +3,14 @@ app.controller("AuthCtrl", [ "$scope", "$firebaseAuth", "uidHandle", function($s
   var ref = new Firebase("https://picit-nss.firebaseio.com/pics");
   
   var auth = $firebaseAuth(ref);
+  $scope.mainContentHidden = true;
 
   auth.$authWithOAuthPopup("github").then(function(authData) {
     console.log("Logged in as:", authData.uid);
     uidHandle.setUid(authData.uid);
-    window.location = "#/main";
+    $scope.mainContentHidden = false;
   }).catch(function(error) {
     console.log("Authentication failed:", error);
     alert("Login failed, please try again.");
-    window.location = "#/";
   });
 }]);

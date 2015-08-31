@@ -1,0 +1,40 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav">
+        <li><a href="#/main">Home</a></li>
+        <li><a href="#/add">Add</a></li>
+      </ul>
+    </div>
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input ng-model="search" type="text" class="form-control" placeholder="Search">
+      </div>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">My Boards</a></li>
+    </ul>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9">
+      <a id="#top"></a>
+      <h1>{{pin.title}}</h1>
+      <div class="pin-detail-image">
+        <img src="{{pin.url}}">
+      </div>
+      <p>{{pin.description}}</p>
+    </div>
+    <div class="col-sm-3">
+      <div class="pin" ng-repeat="item in boards | filter:{'type': 'board', 'title': boardId}">
+        <h3>{{item.title}}</h3>
+        <a href="#"><img src="{{item.url}}" >
+          <p>Image will go in here</p>
+        </a>
+        <p>{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
