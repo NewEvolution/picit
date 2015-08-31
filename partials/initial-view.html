@@ -1,38 +1,56 @@
-    <section class="container-fluid">  <!-- this will go in initial-view partial -->
+    <section class="container-fluid" ng-repeat="board in boards"> 
       <div class="row initial-view">
-        <div class="col-md-2">Empty spacer</div>
+        <div class="col-md-1"></div>
         <div class="col-md-2">
           <div class="pin">
-            <h3>Title</h3>
-            <a href=""><img src="" ></a>
-            <p>Image will go in here</p>
-            <p>Brief board description</p>
+            <button type="submit" class="btn btn-warning btn-xs btn-hover tack" >TackIt!</button>
+            <h3>{{board.title}}</h3>
+            <a href="#"><img src="{{board.url}}" >
+              <p>Image will go in here</p>
+            </a>
+            <p>{{board.description}}</p>
           </div>
         </div>        
         <div class="col-md-2">
           <div class="pin">
-            <h3>Title</h3>
-            <a href=""><img src="" ></a>
-            <p>Image will go in here</p>
-            <p>Brief board description</p>
+            <button type="submit" class="btn btn-warning btn-xs btn-hover tack">TackIt!</button>
+            <h3>{{board.title}}</h3>
+            <a href="#"><img src="{{board.url}}" >
+              <p>Image will go in here</p>
+            </a>
+            <p>{{board.description}}</p>
           </div>
         </div>        
         <div class="col-md-2">
           <div class="pin">
-            <h3>Title</h3>
-            <a href=""><img src="" ></a>
-            <p>Image will go in here</p>
-            <p>Brief board description</p>
+            <button type="submit" class="btn btn-warning btn-xs btn-hover tack">TackIt!</button>
+            <h3>{{board.title}}</h3>
+            <a href="#"><img src="{{board.url}}" >
+              <p>Image will go in here</p>
+            </a>
+            <p>{{board.description}}</p>
           </div>
         </div>        
         <div class="col-md-2">
           <div class="pin">
-            <h3>Title</h3>
-            <a href=""><img src="" ></a>
-            <p>Image will go in here</p>
-            <p>Brief board description</p>
+            <button type="submit" class="btn btn-warning btn-xs btn-hover tack">TackIt!</button>
+            <h3>{{board.title}}</h3>
+            <a href="#"><img src="{{board.url}}" >
+              <p>Image will go in here</p>
+            </a>
+            <p>{{board.description}}</p>
+          </div>
+        </div>        
+        <div class="col-md-2">
+          <div class="pin">
+            <button type="submit" class="btn btn-warning btn-xs btn-hover tack">TackIt!</button>
+            <h3>{{board.title}}</h3>
+            <a href="#"><img src="{{board.url}}" >
+              <p>Image will go in here</p>
+            </a>
+            <p>{{board.description}}</p>
           </div>
         </div>
-        <div class="col-md-2">Empty spacer</div>
+        <div class="col-md-1"></div>
       </div>
     </section>

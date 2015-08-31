@@ -7,7 +7,7 @@ app.config(['$routeProvider',
         controller: 'AuthCtrl'
       }).when('/main', {
         templateUrl: 'partials/initial-view.html',
-        controller: ''
+        controller: 'InitCtrl'
       }).when('/add', {
         templateUrl: 'partials/add-pic.html',
         controller: 'AddCtrl'

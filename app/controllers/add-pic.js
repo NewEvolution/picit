@@ -21,5 +21,4 @@ app.controller("AddCtrl",
       });
     };
   }
-
-  ]);
+]);
