@@ -19,6 +19,7 @@ app.controller("boardCtrl",
         userId: uidHandler.getUid(),
         description: $scope.newItem.description
       });
+    window.location = '#/board'
       $scope.newItem = {};
     };
   }
