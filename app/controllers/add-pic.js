@@ -5,19 +5,23 @@ app.controller("AddCtrl",
   "uidHandle",
   function($scope, $routeParams, $firebaseArray, uidHandler) {
 
-  var ref = new Firebase("https://picit-nss.firebaseio.com/pics");
-    $scope.messages = $firebaseArray(ref);
+    var ref = new Firebase("https://picit-nss.firebaseio.com/pics");
+    $scope.boards = $firebaseArray(ref);
     $scope.newItem = {};
+    $scope.uid = uidHandler.getUid();
+    $scope.setBoard = function(boardName) {
+      $scope.newItem.boardId = boardName;
+    };
     $scope.addPic = function() {
-      $scope.messages.$add({
+      $scope.boards.$add({
 
         type: "pin",
-        url: $scope.newItem.url,
-        title: $scope.newItem.title,
-        //boardId: $scope.newItem.boardId,
+        url: $scope.newItem.url || null,
+        title: $scope.newItem.title || null,
+        boardId: $scope.newItem.boardId,
         private: $scope.newItem.private || false,
-        userId: uidHandler.getUid(),
-        description: $scope.newItem.description
+        userId: $scope.uid || null,
+        description: $scope.newItem.description || null
       });
       $scope.newItem = {};
     };

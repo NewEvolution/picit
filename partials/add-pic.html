@@ -7,11 +7,13 @@
         <h4 class="modal-title" id="boardChooserLabel">Boards</h4>
       </div>
       <div class="modal-body">
-        
+        <ul>
+          <li ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid}"><a href="" ng-click="setBoard(board.title)">{{board.title}}</a></li>
+        </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Choose Board</button>
+        <button type="button" ng-click="addPic()" class="btn btn-primary" data-dismiss="modal">Choose Board</button>
       </div>
     </div>
   </div>
@@ -32,5 +34,5 @@
   <div>
     Private<input type="checkbox" ng-model="newItem.private" /> 
   </div>
-  <button ng-click="addPic()" data-toggle="modal" data-target="#boardChooser">Add Pic</button>
+  <button data-toggle="modal" data-target="#boardChooser">Add Pic</button>
 </section>
