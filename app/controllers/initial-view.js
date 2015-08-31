@@ -11,9 +11,4 @@ app.controller("InitCtrl",
   $(".initial-view").on('mouseleave', ".pin", function() {
     $(this).children(".tack").addClass("invisible");
   });
-  
-  // $scope.onMouseEnter = function showTack() {
-  //   $(".tack").css("display", "inline-block");
-  //   console.log("function called");
-  // };
 });
