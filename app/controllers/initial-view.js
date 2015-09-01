@@ -14,7 +14,6 @@ app.controller("InitCtrl",
 
   $scope.gotoPin = function(sentItem) {
     window.location = "#/pin/" + sentItem.$id;
-    $("input").val("");
   };
 
     $scope.deleteIt = function(pics) {

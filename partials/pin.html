@@ -9,12 +9,16 @@
       <p>{{pin.description}}</p>
     </div>
     <div class="col-sm-3">
-      <div class="pin" ng-repeat="item in boards | filter:{'type': 'board', 'title': boardId[0]}">
-        <h3>{{item.title}}</h3>
-        <a href="#"><img src="{{item.url}}" >
-          <p>Image will go in here</p>
-        </a>
-        <p>{{item.description}}</p>
+      <div class="pin" ng-repeat="board in boards | filter:{'type': 'board', 'title': boardId[0]}">
+        <h3>{{board.title}}</h3>
+        <div class="boardpics">
+          <a href="" ng-click="openBoard(board)">
+            <div class="boardpic" ng-repeat="pic in boards | filter:{'boardId': board.title} | limitTo: 4">
+              <img ng-src="{{pic.url}}">
+            </div>
+          </a>
+        </div>
+        <p>{{board.description}}</p>
       </div>
     </div>
   </div>
