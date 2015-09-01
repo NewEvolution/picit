@@ -44,7 +44,6 @@ function($scope, $routeParams, $firebaseArray, uidHandler) {
         description: $scope.newBoard.description || null,
       }).then(function(ref) {
       var id = ref.key();
-      //$scope.addPin = function() {
          $scope.pic.$add({
 
           type: "pin",
@@ -55,7 +54,6 @@ function($scope, $routeParams, $firebaseArray, uidHandler) {
           userId: $scope.uid || null,
           description: $scope.newItem.description || null
         });
-       //};
       });
     };
   }
