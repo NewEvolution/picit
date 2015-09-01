@@ -5,6 +5,7 @@ function($scope, $routeParams, $firebaseArray, $firebaseObject, $anchorScroll, u
   var pin = new Firebase("https://picit-nss.firebaseio.com/pics/" + $routeParams.clickedPin);
   $scope.boardId = [];
   $scope.uid = uidHandler.getUid();
+  $scope.newItem = {};
 
   $scope.boards = $firebaseArray(ref);
   $scope.pin = $firebaseObject(pin);

@@ -3,6 +3,7 @@ function($scope, $firebaseArray, $firebaseObject, uidHandler) {
   var ref = new Firebase("https://picit-nss.firebaseio.com/pics");
   $scope.boards = $firebaseArray(ref);
   $scope.uid = uidHandler.getUid();
+  $scope.newItem = {};
 
   $(".initial-view").on('mouseenter', "div.pin", function() {
     $(this).children(".tack").removeClass("invisible");
