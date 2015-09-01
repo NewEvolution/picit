@@ -1,43 +1,52 @@
 <!-- Board Chooser Modal -->
 <div class="modal fade" id="boardChooser" tabindex="-1" role="dialog" aria-labelledby="boardChooserLabel">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content center modalStyle">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="boardChooserLabel">Boards</h4>
+        <p class="modal-title" id="boardChooserLabel"><h2><strong>Add Picture to New or Existing Board</strong></h2></p>
       </div>
       <div class="modal-body">
-        <ul>
-          <li ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid}"><a href="" ng-click="setBoard(board.title)">{{board.title}}</a></li>
-        </ul>
         <div>
-          <p>Board Title<input label="Board Title" type="text" ng-model="newBoard.title"></p>
-          <p>Board Desription<input label="Board Description" type="text" ng-model="newBoard.description"></p>
+          <ul>
+            <li class="liStyle" ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid}"><a href="" ng-click="setBoard(board.title)"><h3>{{board.title}}</h3></a></li>
+            <br>
+          </ul>
+            <button type="button" ng-click="addPic()" class="btn btn-primary" data-dismiss="modal">Choose Board</button>
+          
+        </div>
+        <hr>
+        <div>
+          <p><h3>Board Title: <input label="Board Title" type="text" ng-model="newBoard.title"></h3></p>
+          <p><h3>Board Note: <input label="Board Description" type="text" ng-model="newBoard.description"></h3></p>
           <button type="button" ng-click="addBoard()" class="btn btn-primary" data-dismiss="modal">New Board</button>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" ng-click="addPic()" class="btn btn-primary" data-dismiss="modal">Choose Board</button>
       </div>
     </div>
   </div>
 </div>
 <!-- End Board Chooser Modal -->
 
-<section>
-  <h2>PinIt</h2>
+<section class="titleColor center">
+  <h2>Add a Picture</h2>
   <div>
-    Title<input type="text" ng-model="newItem.title" /> 
+    <h3>Title:<input type="text" ng-model="newItem.title" /> </h3>
   </div>
+  <br>
   <div>
-    Link<input type="text" ng-model="newItem.url" /> 
+    <h3>Link:<input type="text" ng-model="newItem.url" /> </h3>
   </div>
+  <br>
   <div>
-    Description<input type="text" ng-model="newItem.description" /> 
+    <h3>Note:<input type="text" ng-model="newItem.description" /></h3> 
   </div>
+  <br>
   <div>
-    Private<input type="checkbox" ng-model="newItem.private" /> 
+    <h3>Private?<input type="checkbox" ng-model="newItem.private" /> </h3>
   </div>
-  <button data-toggle="modal" data-target="#boardChooser">Add Pic</button>
+  <br>
+  <button class="btn btn-primary" data-toggle="modal" data-target="#boardChooser">Add Pic</button>
 </section>
