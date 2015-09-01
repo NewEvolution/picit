@@ -8,7 +8,7 @@
     <title>Picit</title>
   </head>
   <body ng-app="PicitApp">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <ul class="nav navbar-nav">
@@ -26,6 +26,15 @@
         </ul>
       </div><!-- /.container-fluid -->
     </nav>
+
+<!--     <div ng-controller="FaceCtrl" id="login" class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <p><button id="facebook" ng-click="FBLogin()">Sign in with Facebook</button></p>
+        <p><button id="github" ng-click="gitHubLogin()">Sign in with Github</button></p>
+      </div>
+      <div class="col-md-4"></div>
+    </div> -->
 
     <div ng-controller="AuthCtrl">
       <div ng-hide="mainContentVisible" ng-view>

@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+body {
+  padding: 75px;
+}
+
 .pin {
   border: 2px solid black;
   margin-top: 20px;
@@ -44,4 +48,21 @@
   margin-left: 5px;
 }
 
+button#facebook {
+    border-color: #2d5073;
+    background-color: #3b5998;
+    color: white;
+    width: 200px;
+}
+
+button#github{
+    border-color: #007aa6;
+    background-color: #444444;
+    color: white;
+    width: 200px;
+}
+
+#login {
+  text-align: center;
+}
 
