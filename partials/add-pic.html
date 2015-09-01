@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body">
         <ul>
-          <li ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid}"><a href="" ng-click="setBoard(board.title)">{{board.title}}</a></li>
+          <li ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid}"><a href="" ng-click="setBoard(board.$id)">{{board.title}}</a></li>
         </ul>
         <div>
           <p>Board Title<input label="Board Title" type="text" ng-model="newBoard.title"></p>

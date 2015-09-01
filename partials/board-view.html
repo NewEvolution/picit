@@ -1,8 +1,35 @@
+<!-- Board Chooser Modal -->
+<div class="modal fade" id="boardChooser" tabindex="-1" role="dialog" aria-labelledby="boardChooserLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="boardChooserLabel">Boards</h4>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid}"><a href="" ng-click="setBoard(board.$id)">{{board.title}}</a></li>
+        </ul>
+        <div>
+          <p>Board Title<input label="Board Title" type="text" ng-model="newBoard.title"></p>
+          <p>Board Desription<input label="Board Description" type="text" ng-model="newBoard.description"></p>
+          <button type="button" ng-click="addBoard()" class="btn btn-primary" data-dismiss="modal">New Board</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" ng-click="addPic()" class="btn btn-primary" data-dismiss="modal">Choose Board</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Board Chooser Modal -->
+
 <section class="container-fluid" > 
   <div class="row initial-view">
     <div class="col-sm-4 col-md-3" ng-repeat="board in boards | filter: {'type': 'pin', 'boardId': theBoard} | filter: $parent.search">
       <div class="pin">
-        <button class="btn btn-warning btn-xs btn-hover tack invisible" >PicIt!</button>
+        <button class="btn btn-warning btn-xs btn-hover tack invisible" data-toggle="modal" data-target="#boardChooser" ng-click="choosePic(board.$id)">PicIt!</button>
         <button class="btn btn-warning btn-xs btn-hover tack invisible" ng-click="deleteIt(board.$id)">Delete It!</button>
         <h3>{{board.title}}</h3>
         <div class="pin-image">

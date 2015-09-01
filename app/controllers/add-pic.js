@@ -13,8 +13,8 @@ function($scope, $routeParams, $firebaseArray, uidHandler) {
   $scope.newBoard = {};
   $scope.uid = uidHandler.getUid();
   
-  $scope.setBoard = function(boardName) {
-    $scope.newItem.boardId = boardName;
+  $scope.setBoard = function(boardId) {
+    $scope.newItem.boardId = boardId;
   };
 
 
@@ -30,30 +30,28 @@ function($scope, $routeParams, $firebaseArray, uidHandler) {
       description: $scope.newItem.description || null
     });
     $scope.newItem = {};
-    };
+  };
     
-    $scope.addBoard = function () {
-      $scope.boards.$add({
+  $scope.addBoard = function () {
+    $scope.boards.$add({
 
-        type: "board",
-        title: $scope.newBoard.title || null,
-        pinIds: [],
-        //boardId: $scope.newItem.boardId,
-        private: $scope.newItem.private || false,
-        userId: uidHandler.getUid(),
-        description: $scope.newBoard.description || null,
-      }).then(function(ref) {
+      type: "board",
+      title: $scope.newBoard.title || null,
+      private: $scope.newItem.private || false,
+      userId: uidHandler.getUid(),
+      description: $scope.newBoard.description || null,
+    }).then(function(ref) {
       var id = ref.key();
-         $scope.pic.$add({
+      $scope.pic.$add({
 
-          type: "pin",
-          url: $scope.newItem.url || null,
-          title: $scope.newItem.title || null,
-          boardId: [id] || null,
-          private: $scope.newItem.private || false,
-          userId: $scope.uid || null,
-          description: $scope.newItem.description || null
-        });
+        type: "pin",
+        url: $scope.newItem.url || null,
+        title: $scope.newItem.title || null,
+        boardId: [id] || null,
+        private: $scope.newItem.private || false,
+        userId: $scope.uid || null,
+        description: $scope.newItem.description || null
+      });
       });
     };
   }

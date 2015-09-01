@@ -1,6 +1,6 @@
 <section class="container-fluid"> 
   <div class="row initial-view">
-    <div class="col-md-3" ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid} | filter: $parent.search">
+    <div class="col-sm-4 col-md-3" ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid} | filter: $parent.search">
       <div class="pin">
         <button class="btn btn-warning btn-xs btn-hover tack invisible" ng-click="deleteIt(board.$id)">Delete It!</button>
         <h3>{{board.title}}</h3>

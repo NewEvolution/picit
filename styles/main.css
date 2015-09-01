@@ -19,7 +19,8 @@
     width: 100%; }
 
 .boardpics {
-  height: 300px; }
+  height: 300px;
+  overflow: hidden; }
   .boardpics .boardpic {
     width: 50%;
     display: inline-block;
