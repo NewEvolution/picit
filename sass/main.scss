@@ -3,7 +3,7 @@ body{
 }
 
 .navbar-default {
-  margin-top: 20px;
+  margin-top: 0;
   background-color: slateGray;
 }
 
@@ -24,6 +24,14 @@ body{
 
 .navbar-default .navbar-brand:hover{
   color: #FEFAC0;  /*Home hover color*/
+}
+
+.navbar-brand {
+  padding: 5px;
+}
+
+.searchbar {
+  margin-top: 5px;
 }
 
 .dropdown-menu > li > a:hover,{
@@ -60,7 +68,7 @@ body {
 
 .pin-detail-image {
   img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -72,12 +80,15 @@ body {
     height: 300px;
     overflow: hidden;
   }
+  .titleHolder,
   .description {
     height: 4.5em;
     overflow: scroll;
   }
   h3 {
     text-align: center;
+    vertical-align: middle;
+    margin-top: 5px;
   }
   p {
     margin-left: 5px;
