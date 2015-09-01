@@ -68,7 +68,7 @@ body {
   .pin .titleHolder,
   .pin .description {
     height: 4.5em;
-    overflow: scroll; }
+    overflow: hidden; }
   .pin h3 {
     text-align: center;
     vertical-align: middle;
