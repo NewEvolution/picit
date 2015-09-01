@@ -16,9 +16,9 @@ app.controller("InitCtrl",
     window.location = "#/pin/" + sentItem.$id;
   };
 
-    $scope.deleteIt = function(pics) {
-        ref.child(pics).remove();
-    };
+  $scope.deleteIt = function(pics) {
+      ref.child(pics).remove();
+  };
   
   // $scope.onMouseEnter = function showTack() {
   //   $(".tack").css("display", "inline-block");
