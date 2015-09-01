@@ -4,6 +4,5 @@ app.controller("UserCtrl", [ "$scope", "$firebaseArray", "uidHandle", function($
 
   $scope.uid = uidHandle.getUid();
   $scope.boards = $firebaseArray(ref);
-
-  console.log(uidHandle.getUid());
+  
 }]);
