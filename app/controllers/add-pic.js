@@ -37,7 +37,7 @@ function($scope, $routeParams, $firebaseArray, uidHandler) {
 
       type: "board",
       title: $scope.newBoard.title || null,
-      private: $scope.newItem.private || false,
+      private: $scope.newBoard.private || false,
       userId: uidHandler.getUid(),
       description: $scope.newBoard.description || null,
     }).then(function(ref) {

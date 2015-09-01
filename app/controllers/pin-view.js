@@ -21,6 +21,11 @@ function($scope, $routeParams, $firebaseArray, $firebaseObject, $anchorScroll, u
     window.location = "#/board/" + clickedBoard.$id;
   };
 
+  $scope.deleteIt = function() {
+      ref.child($routeParams.clickedPin).remove();
+      window.location = "#/";
+  };
+
   $scope.choosePic = function(clickedPic) {
     var picRef = new Firebase("https://picit-nss.firebaseio.com/pics/" + clickedPic);
     $scope.picObj = $firebaseObject(picRef);
