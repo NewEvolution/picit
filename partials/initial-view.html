@@ -6,7 +6,7 @@
         <button class="btn btn-warning btn-xs btn-hover tack invisible" ng-click="deleteIt(board.$id)">Delete It!</button>
         <h3>{{board.title}}</h3>
         <div class="pin-image">
-          <a href="" ng-click="gotoPin(board)"><img src="{{board.url}}"></a>
+          <a href="" ng-click="gotoPin(board)"><img ng-src="{{board.url}}"></a>
         </div>
         <p>{{board.description}}</p>
       </div>
