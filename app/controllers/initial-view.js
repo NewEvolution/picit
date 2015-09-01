@@ -14,14 +14,10 @@ app.controller("InitCtrl",
 
   $scope.gotoPin = function(sentItem) {
     window.location = "#/pin/" + sentItem.$id;
+    $("input").val("");
   };
 
     $scope.deleteIt = function(pics) {
         ref.child(pics).remove();
     };
-  
-  // $scope.onMouseEnter = function showTack() {
-  //   $(".tack").css("display", "inline-block");
-  //   console.log("function called");
-  // };
 });

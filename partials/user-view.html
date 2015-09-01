@@ -3,7 +3,7 @@
     <div class="col-md-3" ng-repeat="board in boards | filter:{'type': 'board', 'userId': uid}">
       <div class="pin">
         <h3>{{board.title}}</h3>
-        <a href="#"><img src="{{board.url}}" >
+        <a href="#"><img ng-src="{{board.url}}" >
           <p>Image will go in here</p>
         </a>
         <p>{{board.description}}</p>
