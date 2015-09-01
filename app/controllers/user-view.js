@@ -4,5 +4,8 @@ app.controller("UserCtrl", [ "$scope", "$firebaseArray", "uidHandle", function($
 
   $scope.uid = uidHandle.getUid();
   $scope.boards = $firebaseArray(ref);
-  
+
+  $scope.deleteIt = function(pics) {
+      ref.child(pics).remove();
+  };
 }]);
