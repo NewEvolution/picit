@@ -19,6 +19,9 @@
         <div>
           <p><h3>Board Title: <input label="Board Title" type="text" ng-model="newBoard.title"></h3></p>
           <p><h3>Board Note: <input label="Board Description" type="text" ng-model="newBoard.description"></h3></p>
+          <div>
+            <h3>Private?<input type="checkbox" ng-model="newBoard.private" /></h3>
+          </div>
           <button type="button" ng-click="addBoard()" class="btn btn-primary" data-dismiss="modal">New Board</button>
         </div>
       </div>
