@@ -52,8 +52,8 @@ app.controller("AddCtrl",
             description: $scope.newItem.description || null
           });
 
-      });
-    };
+      };
+    });
 
   }
 ]);

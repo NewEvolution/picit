@@ -1,5 +1,5 @@
 app.controller("AuthCtrl", [ "$scope", "$firebaseAuth", "uidHandle", function($scope, $firebaseAuth, uidHandle) {
-
+  
   var ref = new Firebase("https://picit-nss.firebaseio.com/pics");
   
   var auth = $firebaseAuth(ref);
