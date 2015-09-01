@@ -8,12 +8,22 @@
   .pin .pin-image {
     height: 300px;
     overflow: hidden; }
+  .pin .description {
+    height: 4.5em;
+    overflow: scroll; }
   .pin h3 {
     text-align: center; }
   .pin p {
     margin-left: 5px; }
   .pin img {
     width: 100%; }
+
+.boardpics {
+  height: 300px; }
+  .boardpics .boardpic {
+    width: 50%;
+    display: inline-block;
+    overflow: hidden; }
 
 .initial-view {
   margin-bottom: 27px; }

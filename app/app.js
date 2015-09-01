@@ -14,6 +14,9 @@ app.config(['$routeProvider',
       }).when('/board', {
         templateUrl: 'partials/board.html',
         controller: 'boardCtrl'
+      }).when('/board/:clickedBoard', {
+        templateUrl: 'partials/board-view.html',
+        controller: 'BoardViewCtrl'
       }).when('/pin/:clickedPin', {
         templateUrl: 'partials/pin.html',
         controller: 'PinCtrl'

@@ -4,12 +4,16 @@
       <div class="pin">
         <button class="btn btn-warning btn-xs btn-hover tack" ng-click="deleteIt(board.$id)">Delete It!</button>
         <h3>{{board.title}}</h3>
-        <a href="#">
-          <span class="boardpic">
-            <img src="{{board.url}}">
-          </span>
-        </a>
-        <p>{{board.description}}</p>
+        <div class="boardpics">
+          <a href="">
+            <div class="boardpic" ng-repeat="pic in boardPics | filter:{'boardId': board.title} | limitTo: 4">
+              <img ng-src="{{pic.url}}">
+            </div>
+          </a>
+        </div>
+        <div class="description">
+          <p>{{board.description}}</p>
+        </div>
       </div>
     </div> 
   </div>
