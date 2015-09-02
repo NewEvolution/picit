@@ -23,8 +23,10 @@ function($scope, $routeParams, $firebaseArray, $firebaseObject, $anchorScroll, u
   };
 
   $scope.deleteIt = function() {
+    if($scope.pin.userId === $scope.uid) {
       ref.child($routeParams.clickedPin).remove();
       window.location = "#/";
+    }
   };
 
   $scope.choosePic = function(clickedPic) {

@@ -2,6 +2,7 @@ app.controller("InitCtrl", ["$scope", "$firebaseArray", "$firebaseObject", "uidH
 function($scope, $firebaseArray, $firebaseObject, uidHandler) {
   var ref = new Firebase("https://picit-nss.firebaseio.com/pics");
   $scope.boards = $firebaseArray(ref);
+  $scope.boardsObj = $firebaseObject(ref);
   $scope.uid = uidHandler.getUid();
   $scope.newItem = {};
 
@@ -18,7 +19,9 @@ function($scope, $firebaseArray, $firebaseObject, uidHandler) {
   };
 
   $scope.deleteIt = function(pics) {
+    if($scope.boardsObj[pics].userId === $scope.uid) {
       ref.child(pics).remove();
+    }
   };
 
   $scope.choosePic = function(clickedPic) {

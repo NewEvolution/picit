@@ -3,6 +3,7 @@ function($scope, $firebaseArray, $firebaseObject, $routeParams, uidHandler) {
   var ref = new Firebase("https://picit-nss.firebaseio.com/pics/");
   var boardRef = new Firebase("https://picit-nss.firebaseio.com/pics/" + $routeParams.clickedBoard);
   $scope.boards = $firebaseArray(ref);
+  $scope.boardsObj = $firebaseObject(ref);
   $scope.uid = uidHandler.getUid();
 
   var clickedBoard = $firebaseObject(boardRef);
@@ -24,7 +25,9 @@ function($scope, $firebaseArray, $firebaseObject, $routeParams, uidHandler) {
   };
 
   $scope.deleteIt = function(pics) {
+    if($scope.boardsObj[pics].userId === $scope.uid) {
       ref.child(pics).remove();
+    }
   };
 
   $scope.choosePic = function(clickedPic) {
