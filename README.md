@@ -1,4 +1,4 @@
-#picit
+#Picit
 
 Group project to create a Pinterest clone
 
