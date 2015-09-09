@@ -24,6 +24,8 @@ Group project to create a Pinterest clone
  - Make note of the port number returned after running _http-server_
 - Navigate to http://localhost:[your-port-number]
 
+###Usage:
+
 Home screen shows a list of all Pics not flagged private posted by all users.
 
 New Pic button in menu allows adding of a personal Pic, all fields required.  Link field is for pasting in the URL of an *image*.
